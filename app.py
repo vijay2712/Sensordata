@@ -26,7 +26,7 @@ app = Flask(
     template_folder="templates"
 )
 
-
+run_with_ngrok(app)  
 
 scaler=MinMaxScaler()
 
@@ -106,6 +106,5 @@ def charts():
 def tables():
 	return render_template('tables.html')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+app.run()
 
