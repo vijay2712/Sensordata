@@ -3,11 +3,11 @@
    py -m venv env
 
 
-2. Activate virtual environment by using the following command
+2. Activate virtual environment 
 
    env\Scripts\activate
 
-3. Install all the dependencies by using the following command
+3. Install all the dependencies 
 
    pip install -r requirements.txt
 
