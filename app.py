@@ -8,6 +8,7 @@ import plotly.express as px
 import json
 import pickle
 import numpy as np
+from flask_ngrok import run_with_ngrok
 
 import matplotlib.pylab as plt
 from matplotlib import pyplot
@@ -24,7 +25,7 @@ app = Flask(
     __name__,
     template_folder="templates"
 )
-
+run_with_ngrok(app) 
 scaler=MinMaxScaler()
 
 district = {'Delhi' : 'datatraining.txt', 'Mumbai' : "datatraining.txt",'Goa' : "datatraining.txt"}
@@ -103,5 +104,4 @@ def charts():
 def tables():
 	return render_template('tables.html')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+app.run()
